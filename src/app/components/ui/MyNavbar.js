@@ -30,24 +30,11 @@ export default function MyNavbar({ locale = 'en' }) {
         </Link>
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-6" justify="center">
-        {process.env.NEXT_PUBLIC_SEARCH_ENABLED != 0 && <NavbarItem>
-          <Link color="foreground" href="/tweets">
-          {t('Search Tweets')}
-          </Link>
-        </NavbarItem>}
-        <NavbarItem>
-          <Link color="foreground" href="/downloader">
-          {t('Downloader')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="https://github.com/ezshine/twitterxdownload" target="_blank">
-          {t('Self Hosted')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <FriendsLink locale={locale} />
-        </NavbarItem>
+        {/* 所有导航项已隐藏 */}
+        {/* 搜索功能已隐藏 */}
+        {/* Downloader 已隐藏 */}
+        {/* Self Hosted 已隐藏 */}
+        {/* Friends Link 已隐藏 */}
       </NavbarContent>
       <NavbarContent justify="end" className="hidden md:flex">
         <NavbarItem>
@@ -57,13 +44,7 @@ export default function MyNavbar({ locale = 'en' }) {
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end" className="md:hidden">
-        <NavbarItem>
-          <Link href="/tweets" className="text-foreground">
-            <RiSearchLine />
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+      {/* 移动端搜索图标已隐藏 */}
     </Navbar>
   );
 }
