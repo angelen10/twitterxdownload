@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="https://twitterxdownload.com/images/logo.png" alt="TwitterXDownload" width="80" height="80">
-  <h1>TwitterXDownload</h1>
+  <img src="https://twitterxdownload.com/images/logo.png" alt="XVideoDownloader" width="80" height="80">
+  <h1>XVideoDownloader</h1>
 </div>
 
 
-TwitterXDownload is a powerful Twitter video downloader (not only video). And it's also a marketing tool that helps you republish the content efficiently. You can translate threads with one click. 
+XVideoDownloader is a powerful Twitter video downloader (not only video). And it's also a marketing tool that helps you republish the content efficiently. You can translate threads with one click. 
 
 So, its perfect for content creators, marketers.
 

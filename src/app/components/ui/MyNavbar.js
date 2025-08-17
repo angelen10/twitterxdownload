@@ -25,7 +25,7 @@ export default function MyNavbar({ locale = 'en' }) {
         <Link href="/" className="text-foreground">
           <Image src="/images/logo.png" alt="XVideoDownloader" width={32} height={32} />
           <p className="font-bold text-inherit mx-3 text-2xl">
-            {t('TwitterXDownload')}
+            {t('XVideoDownloader')}
           </p>
         </Link>
       </NavbarBrand>
