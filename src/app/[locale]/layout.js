@@ -12,22 +12,22 @@ import MyFooter from '../components/ui/MyFooter';
 
 export const metadata = {
   title: {
-    default: 'XVideoDownloader - Free Twitter Video Downloader',
-    template: '%s | XVideoDownloader'
+    default: 'X-Downloader - Free Twitter Video Downloader',
+    template: '%s | X-Downloader'
   },
   description: 'Download Twitter videos and media content for free. No registration required. Fast and easy Twitter video downloader. Twitter Media Saver. Twitter X Download.',
   keywords: 'twitter downloader, x video downloader, twitter video download, x.com downloader',
-  authors: [{ name: 'XVideoDownloader' }],
+  authors: [{ name: 'X-Downloader' }],
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   alternates: {
     canonical: 'https://twitterxdownload.com/',
   },
   openGraph: {
-    title: 'XVideoDownloader - Free Twitter Video Downloader',
+    title: 'X-Downloader - Free Twitter Video Downloader',
     description: 'Download Twitter videos and media content for free. No registration required.',
     type: 'website',
     url: 'https://twitterxdownload.com',
-    siteName: 'XVideoDownloader',
+    siteName: 'X-Downloader',
     images: [{
       url: 'https://twitterxdownload.com/images/og.png'
     }]
@@ -35,7 +35,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@twitterxdownload',
-    title: 'XVideoDownloader - Free Twitter Video Downloader',
+    title: 'X-Downloader - Free Twitter Video Downloader',
     description: 'Download Twitter videos and media content for free. No registration required.',
     images: ['https://twitterxdownload.com/images/og.png']
   },
