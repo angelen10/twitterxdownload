@@ -240,18 +240,6 @@ export default function Downloader({ params: { locale } }) {
 
     return (
         <div className="page-container">
-            <Drawer isOpen={isOpen} isDismissable={false} hideCloseButton={true} size="md" radius="none" onOpenChange={onOpenChange}>
-                <DrawerContent>
-                    <DrawerHeader>
-                        <div className="text-medium font-semibold">{t('Re-Publish')}</div>
-                    </DrawerHeader>
-                    <DrawerBody>
-                        <RePublishPanel locale={locale} tweets={tweets} onClose={()=>{
-                            onOpenChange(false);
-                        }} />
-                    </DrawerBody>
-                </DrawerContent>
-            </Drawer>
             <div className="flex flex-col gap-4 justify-center items-center">
                 <div></div>
                 <div className="">
@@ -269,33 +257,9 @@ export default function Downloader({ params: { locale } }) {
                 </div>
                 <div></div>
             </div>
-            <div className="flex gap-4 justify-center items-start">
+            <div className="flex flex-col gap-4 justify-center items-center">
                 { tweetData && originTweets.length > 0 && (
                     <>
-                        <div className="w-1/3 md:block hidden box-border border-foreground/10 border-[1px] rounded-2xl p-8 bg-[#f8f8f8] dark:bg-foreground/5">
-                            <div className="text-medium font-semibold flex items-center">
-                                <div className="flex-1">{t('Parse Result')}</div>
-                                <Button href={`/tweets/${originTweets[0].id_str}`} target="_blank" as={Link} color="primary" size="sm" radius="full">
-                                    {t('Goto Article')}
-                                </Button>
-                            </div>
-                            <div className="w-full h-[1px] bg-foreground/10 mt-3"/>
-                            <div className="w-full mt-3">
-                                {originTweets.map((tweet, index) => (
-                                    <div key={index} className="w-full overflow-hidden border-[1px] border-foreground/10 py-2 mb-2 whitespace-nowrap">
-                                        <div>{tweet.text}</div>
-                                        {
-                                            tweet.medias.map((media,index) => {
-                                                return <div key={index}>[{media.type}] {media.url}</div>
-                                            })
-                                        }
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="w-full flex justify-center items-center">
-                                <Button onPress={handleDownloadAllMedia} size="sm" radius="full" color="primary" className="mt-3" isLoading={isPackaging}>{t('Download All')}</Button>
-                            </div>
-                        </div>
                         <div className="w-full box-border border-foreground/10 border-[1px] rounded-2xl p-8 bg-[#f8f8f8] dark:bg-foreground/5">
                             <div className="text-medium font-semibold flex items-center">
                                 <div className="flex-1">{t('Tweets Editor')}</div>
@@ -315,15 +279,33 @@ export default function Downloader({ params: { locale } }) {
                                         ))}
                                     </DropdownMenu>
                                 </Dropdown>
-                                <Button onPress={onOpen} color="primary" size="sm" radius="full" asChild>
-                                    {t('Re-Publish')}
-                                </Button>
                             </div>
                             <div className="w-full h-[1px] bg-foreground/10 mt-3"/>
                             <div className="w-full mt-3">
                                 {tweets.map((tweet, index) => {
                                     return <TweetCard key={index} tweet={tweet} locale={locale} enableEdit={true} onDeleteTweet={() => handleDeleteTweet(index)} onInsertTweet={() => handleInsertTweet(index)} onAddMedia={() => handleAddMedia(index)} onDeleteMedia={(mediaIndex) => handleDeleteMedia(index, mediaIndex)} onUpdateText={(text) => handleUpdateText(index, text)} className="mb-2 cursor-auto select-text"/>
                                 })}
+                            </div>
+                        </div>
+                        <div className="w-full box-border border-foreground/10 border-[1px] rounded-2xl p-8 bg-[#f8f8f8] dark:bg-foreground/5">
+                            <div className="text-medium font-semibold flex items-center">
+                                <div className="flex-1">{t('Parse Result')}</div>
+                            </div>
+                            <div className="w-full h-[1px] bg-foreground/10 mt-3"/>
+                            <div className="w-full mt-3">
+                                {originTweets.map((tweet, index) => (
+                                    <div key={index} className="w-full overflow-hidden border-[1px] border-foreground/10 py-2 mb-2 whitespace-nowrap">
+                                        <div>{tweet.text}</div>
+                                        {
+                                            tweet.medias.map((media,index) => {
+                                                return <div key={index}>[{media.type}] {media.url}</div>
+                                            })
+                                        }
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="w-full flex justify-center items-center">
+                                <Button onPress={handleDownloadAllMedia} size="sm" radius="full" color="primary" className="mt-3" isLoading={isPackaging}>{t('Download All')}</Button>
                             </div>
                         </div>
                     </>
