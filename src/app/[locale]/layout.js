@@ -20,13 +20,13 @@ export const metadata = {
   authors: [{ name: 'X-Downloader' }],
   robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
   alternates: {
-    canonical: 'https://twitterxdownload.com/',
+    canonical: 'https://xdownloader.shop/',
   },
   openGraph: {
     title: 'X-Downloader - Free Twitter Video Downloader',
     description: 'Download Twitter videos and media content for free. No registration required.',
     type: 'website',
-    url: 'https://twitterxdownload.com',
+    url: 'https://xdownloader.shop',
     siteName: 'X-Downloader',
     images: [{
       url: 'https://twitterxdownload.com/images/og.png'

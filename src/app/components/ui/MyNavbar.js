@@ -30,11 +30,19 @@ export default function MyNavbar({ locale = 'en' }) {
         </Link>
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-6" justify="center">
-        {/* 所有导航项已隐藏 */}
-        {/* 搜索功能已隐藏 */}
-        {/* Downloader 已隐藏 */}
-        {/* Self Hosted 已隐藏 */}
-        {/* Friends Link 已隐藏 */}
+        {process.env.NEXT_PUBLIC_SEARCH_ENABLED != 0 && <NavbarItem>
+          <Link color="foreground" href="/tweets">
+          {t('Search Tweets')}
+          </Link>
+        </NavbarItem>}
+        <NavbarItem>
+          <Link color="foreground" href="/downloader">
+          {t('Downloader')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <FriendsLink locale={locale} />
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end" className="hidden md:flex">
         <NavbarItem>
