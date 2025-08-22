@@ -52,13 +52,7 @@ export default function MyNavbar({ locale = 'en' }) {
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end" className="md:hidden">
-        <NavbarItem>
-          <Link href="/tweets" className="text-foreground">
-            <RiSearchLine />
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
+      {/* 移动端搜索图标已隐藏 */}
     </Navbar>
   );
 }

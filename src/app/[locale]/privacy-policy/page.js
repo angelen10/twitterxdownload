@@ -10,7 +10,7 @@ export default function CurrentPage() {
                     </p>
                     
                     <p className="text-sm text-gray-500 mb-8">
-                        Last Updated: May 15, 2024
+                        Last Updated: Aug 15, 2025
                     </p>
                     
                     <div className="space-y-8">
