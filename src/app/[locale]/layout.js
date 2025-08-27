@@ -29,7 +29,7 @@ export const metadata = {
     url: 'https://xdownloader.shop',
     siteName: 'X-Downloader',
     images: [{
-      url: 'https://twitterxdownload.com/images/og.png'
+      url: 'https://xdownloader.shop/images/og.png'
     }]
   },
   twitter: {
@@ -37,7 +37,7 @@ export const metadata = {
     site: '@twitterxdownload',
     title: 'X-Downloader - Free Twitter Video Downloader',
     description: 'Download Twitter videos and media content for free. No registration required.',
-    images: ['https://twitterxdownload.com/images/og.png']
+    images: ['https://xdownloader.shop/images/og.png']
   },
   icons: {
     icon: [

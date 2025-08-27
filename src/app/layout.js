@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
-  metadataBase: new URL('https://twitterxdownload.com'),
+  metadataBase: new URL('https://xdownloader.shop'),
 }
 
 export default function RootLayout({ children }) {
