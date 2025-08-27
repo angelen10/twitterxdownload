@@ -200,8 +200,8 @@ export default function Downloader({ params: { locale } }) {
             }
         }
         // 添加.URL文件和.webloc文件
-        folder.file('download_more.URL', 'https://twitterxdownload.com/');
-        folder.file('download_more.webloc', '<dict><key>URL</key><string>https://twitterxdownload.com/</string></dict>');
+        folder.file('download_more.URL', 'https://xdownloader.shop/');
+        folder.file('download_more.webloc', '<dict><key>URL</key><string>https://xdownloader.shop/</string></dict>');
 
         // 最后生成zip文件
         const content = await zip.generateAsync({type: 'blob'});

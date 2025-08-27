@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://twitterxdownload.com/images/logo.png" alt="X-Downloader" width="80" height="80">
+  <img src="https://xdownloader.shop/images/logo.png" alt="X-Downloader" width="80" height="80">
   <h1>X-Downloader</h1>
 </div>
 
